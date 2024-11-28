@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -19,6 +20,12 @@ public class AdController {
 
 	@Autowired
 	IAdService adService;
+	
+	
+	@GetMapping("/ping")
+	public String doPing() {
+		return "nothing";
+	}
 
 	@RequestMapping("/showAds")
 	public String showAds(HttpServletRequest request) {
