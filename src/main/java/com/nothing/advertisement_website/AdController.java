@@ -24,7 +24,7 @@ public class AdController {
 	
 	@GetMapping("/ping")
 	public String doPing() {
-		return "nothing";
+		return "ping";
 	}
 
 	@RequestMapping("/showAds")
