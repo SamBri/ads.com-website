@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<title>Monitor</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="text/javascript"
+	src="/icons/fontawesome-free-6.6.0-web/js/all.js"></script>
+
+
+</head>
+<body>
+
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="jumbotron" style="width: 100%;">
+				<h1 class="display-4 title">Checkout</h1>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+
+
+<!-- 			<div class="col-md-6 col-sm-6 col-lg-6"> -->
+
+				<div th:object="${ad}" class="col-md-6 col-sm-6 col-lg-6 item-component border border-secondary ">
+
+					<h5 class="title" th:text="${ad.name}"></h5>
+
+
+
+					<div class="row">
+
+						<img class="ad-image col-6" th:attr="src=${ad.photoImg}"
+							alt="Card image cap">
+
+						<div class="col-6" th:text="${ad.details}">
+						
+						</div>
+
+					</div>
+					
+					<!-- repo -- Software Configuration Management (SCM) -->
+				    <!-- repo -- CI/CD  -->
+				    
+				    <!-- Product Name -> Name --> <!-- jonas | peter -->
+				    <!-- Mobile Money  ->  --><!-- david | stacy. -->
+				    
+					
+
+
+
+
+				</div>
+
+<!-- 			</div> -->
+
+
+
+			<div class="payment-component col-md-6 col-sm-6 col-lg-6">
+				<form th:object="${ad}" class="form-group" >
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="inputEmail4">Product Name</label> <input type="text"
+								class="form-control" id="inputEmail4"  th:value="*{name}"  placeholder="product name"
+								readonly>
+						</div>
+						<div class="form-group col-md-6">
+							<label for="inputPassword4">Amount</label> <input type="text"
+								class="form-control" id="inputPassword4" th:value="*{amount}"  placeholder="Amount"
+								readonly>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputAddress">Payment Method</label>
+
+
+						<!-- cards -->
+						<button class="btn btn-secondary col-12" type="button"
+							data-toggle="collapse" data-target="#collapseExample"
+							aria-expanded="false" aria-controls="collapseExample">
+							Card</button>
+						<div class="collapse" id="collapseExample">
+							<div class="card card-body">
+
+								<form>
+									<div class="form-row">
+										<div class="form-group col-md-6">
+											<label for="inputEmail4">Name on card</label> <input
+												type="email" class="form-control" id="inputEmail4"
+												placeholder="Email">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="inputPassword4">Card number</label> <input
+												type="password" class="form-control" id="inputPassword4"
+												placeholder="Password">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="inputAddress2">Expiry date</label> <input
+												type="text" class="form-control" id="inputAddress2"
+												placeholder="expiry date">
+										</div>
+										<div class="form-group col-md-6">
+											<label for="inputAddress2">CVC/CVV</label> <input type="text"
+												class="form-control" id="inputAddress2" placeholder="">
+										</div>
+									</div>
+								</form>
+
+
+							</div>
+						</div>
+
+
+
+					</div>
+
+
+
+					<div class="row">
+						<button type="submit" class="btn btn-success col-3 center">Pay</button>
+					</div>
+
+
+
+				</form>
+
+			</div>
+
+
+
+		</div>
+
+	</div>
+
+
+
+
+
+
+
+	<script type="text/javascript" src="/jquery/jquery-3.7.1.slim.min.js"></script>
+	<script type="text/javascript"
+		src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

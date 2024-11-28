@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8" />
+<title>Monitor</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/styles.css">
+<script type="text/javascript"
+	src="/icons/fontawesome-free-6.6.0-web/js/all.js"></script>
+
+
+</head>
+<body>
+
+
+
+
+	<div class="container-fluid">
+
+		<div class="row">
+			<div class="jumbotron" style="width: 100%;">
+				<h1 class="display-4 title">Ads.com</h1>
+			</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<div class="container-fluid">
+
+
+		<div class="row">
+		
+
+			<!-- screen -->
+			<div th:each="ad : ${ads}" class="screen-component border border-secondary ml-auto mr-auto mb-auto mt-auto col-md-3 col-sm-3 col-lg-3">
+
+				<h5 class="title" th:text="${ad.name}"></h5>
+
+				<div class="row">
+
+					<img class="ad-image col-6" th:attr="src=${ad.photoImg}"
+						alt="Card image cap">
+
+					<div class="col-6" th:text="${ad.details}"></div>
+
+					<a th:href="@{/showCheckoutScreen(adId=${ad.adId})}" type="button" class="btn btn-light col-3 buy"
+						data-toggle="tooltip" data-placement="top" title="buy">
+						<i class="fa-solid fa-cart-shopping"></i>
+					</a>
+
+					<a href="#" type="button" class="btn btn-light col-3 like"
+						data-toggle="tooltip" data-placement="top" title="like">
+						<i class="fa-solid fa-thumbs-up"></i>
+					</a>
+
+					<a href="#" type="button" class="btn btn-light col-3 share"
+						data-toggle="tooltip" data-placement="top" title="share">
+						<i class="fa-solid fa-share"></i>
+					</a>
+
+					<a href="#" type="button" class="btn btn-light col-3 comment"
+						data-toggle="tooltip" data-placement="top" title="comment">
+						<i class="fa-solid fa-comment"></i>
+					</a>
+				</div>
+
+			</div>
+
+<!-- 			<div -->
+<!-- 				class="screen-component border border-secondary ml-auto mr-auto mb-auto mt-auto col-md-3 col-sm-3 col-lg-3"> -->
+
+<!-- 				<h5 class="title">iPhone 16</h5> -->
+
+<!-- 				<div class="row"> -->
+
+<!-- 					<img class="ad-image col-6" src="/img/iphone-16.jpg" -->
+<!-- 						alt="Card image cap"> -->
+
+<!-- 					<div class="col-6">Contrary to popular belief, Lorem Ipsum is -->
+<!-- 						not simply random text. It has roots in a piece of classical Latin -->
+<!-- 						literature from 45 BC, making it over 2000 years old. Richard -->
+<!-- 						McClintock, a Latin professor at</div> -->
+
+<!-- 					<a href="/showCheckoutScreen" type="button" class="btn btn-light col-3 buy" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="buy"> -->
+<!-- 						<i class="fa-solid fa-cart-shopping"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a  href="#" type="button" class="btn btn-light col-3 like" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="like"> -->
+<!-- 						<i class="fa-solid fa-thumbs-up"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 share" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="share"> -->
+<!-- 						<i class="fa-solid fa-share"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a  href="#" type="button" class="btn btn-light col-3 comment" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="comment"> -->
+<!-- 						<i class="fa-solid fa-comment"></i> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+
+<!-- 			</div> -->
+
+<!-- 			<div -->
+<!-- 				class="screen-component border border-secondary ml-auto mr-auto mb-auto mt-auto col-md-3 col-sm-3 col-lg-3"> -->
+
+<!-- 				<h5 class="title">iPhone 16</h5> -->
+
+<!-- 				<div class="row"> -->
+
+<!-- 					<img class="ad-image col-6" src="/img/iphone-16.jpg" -->
+<!-- 						alt="Card image cap"> -->
+
+<!-- 					<div class="col-6">Contrary to popular belief, Lorem Ipsum is -->
+<!-- 						not simply random text. It has roots in a piece of classical Latin -->
+<!-- 						literature from 45 BC, making it over 2000 years old. Richard -->
+<!-- 						McClintock, a Latin professor at</div> -->
+
+
+
+<!-- 					<a href="/showCheckoutScreen" type="button" class="btn btn-light col-3 buy" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="buy"> -->
+<!-- 						<i class="fa-solid fa-cart-shopping"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 like" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="like"> -->
+<!-- 						<i class="fa-solid fa-thumbs-up"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a  href="#" type="button" class="btn btn-light col-3 share" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="share"> -->
+<!-- 						<i class="fa-solid fa-share"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 comment" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="comment"> -->
+<!-- 						<i class="fa-solid fa-comment"></i> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+
+<!-- 			</div> -->
+
+<!-- 			<div -->
+<!-- 				class="screen-component border border-secondary ml-auto mr-auto mb-auto mt-auto col-md-3 col-sm-3 col-lg-3"> -->
+
+<!-- 				<h5 class="title">iPhone 16</h5> -->
+
+<!-- 				<div class="row"> -->
+
+<!-- 					<img class="ad-image col-6" src="/img/iphone-16.jpg" -->
+<!-- 						alt="Card image cap"> -->
+
+<!-- 					<div class="col-6">Contrary to popular belief, Lorem Ipsum is -->
+<!-- 						not simply random text. It has roots in a piece of classical Latin -->
+<!-- 						literature from 45 BC, making it over 2000 years old. Richard -->
+<!-- 						McClintock, a Latin professor at</div> -->
+
+<!-- 					<a href="/showCheckoutScreen" type="button" class="btn btn-light col-3 buy" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="buy"> -->
+<!-- 						<i class="fa-solid fa-cart-shopping"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 like" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="like"> -->
+<!-- 						<i class="fa-solid fa-thumbs-up"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 share" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="share"> -->
+<!-- 						<i class="fa-solid fa-share"></i> -->
+<!-- 					</a> -->
+
+<!-- 					<a href="#" type="button" class="btn btn-light col-3 comment" -->
+<!-- 						data-toggle="tooltip" data-placement="top" title="comment"> -->
+<!-- 						<i class="fa-solid fa-comment"></i> -->
+<!-- 					</a> -->
+<!-- 				</div> -->
+
+<!-- 			</div> -->
+
+
+
+
+
+
+		</div>
+
+	</div>
+
+
+	</div>
+
+	<!-- 				<div style="background-color: green;" class="ad-card-component"> -->
+
+
+	<!-- 					<div class="ad-card-body-component"> -->
+	<!-- 						<h5 class="ad-title">iPhone 16</h5> -->
+
+	<!-- 						<img class="ad-image" src="/img/iphone-16.jpg" -->
+	<!-- 							alt="Card image cap"> -->
+
+
+	<!-- 						<div class="ad-card-action-menu-component row"> -->
+
+
+	<!-- 							<button type="button" class="btn btn-light col-3 buy"> -->
+	<!-- 								<i class="fa-solid fa-cart-shopping"></i> -->
+	<!-- 							</button> -->
+
+	<!-- 							<button type="button" class="btn btn-light col-3 like"> -->
+	<!-- 								<i class="fa-solid fa-thumbs-up"></i> -->
+	<!-- 							</button> -->
+
+	<!-- 							<button type="button" class="btn btn-light col-3 share"> -->
+	<!-- 								<i class="fa-solid fa-share"></i> -->
+	<!-- 							</button> -->
+
+	<!-- 							<button type="button" class="btn btn-light col-3 comment"> -->
+	<!-- 								<i class="fa-solid fa-comment"></i> -->
+	<!-- 							</button> -->
+
+
+
+	<!-- 						</div> -->
+
+
+	<!-- 					</div> -->
+	<!-- 				</div> -->
+
+
+	</div>
+
+
+
+	</div>
+
+	</div>
+
+
+
+
+
+
+
+	<script type="text/javascript" src="/jquery/jquery-3.7.1.slim.min.js"></script>
+	<script type="text/javascript"
+		src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
