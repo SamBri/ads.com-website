@@ -13,6 +13,7 @@
 	<artifactId>advertisement-website</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>advertisement-website</name>
+	<packaging>jar</packaging>
 	<description>ui</description>
 	<url />
 	<licenses>
